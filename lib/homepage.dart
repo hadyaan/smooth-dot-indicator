@@ -32,11 +32,14 @@ class HomePage extends StatelessWidget {
           SmoothPageIndicator(
             controller: _controller,
             count: 4,
-            effect: ExpandingDotsEffect(
+            effect: JumpingDotEffect(
+              // ada 3 jenis efek: tanpa effect / ExpandingDotsEffect / SwapEffect / JumpingDotEffect(tambahkan verticalOffset jika ingin dot nya loncat keatas)
               activeDotColor: Colors.deepPurple,
               dotColor: Colors.deepPurple.shade100,
               dotHeight: 24,
               dotWidth: 24,
+              spacing: 15,
+              verticalOffset: 20,
             ),
           )
         ],
